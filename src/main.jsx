@@ -5,10 +5,10 @@ import './index.css'
 import { BrowserRouter } from 'react-router-dom'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  // <BrowserRouter>
-  //   <App />
-  // </BrowserRouter>,
-  <div>
-    hello charlie 123 check
-  </div>
+
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  
+  
 )
