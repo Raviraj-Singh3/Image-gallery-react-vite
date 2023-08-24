@@ -8,8 +8,8 @@ function CustomRoute(){
     return (
         <Routes>
 
-            <Route path="/" element={<ImageGallary />} />
-            <Route path="/photos/:id" element={<ImageDetails />} />
+            <Route path="/images-vite" element={<ImageGallary />} />
+            <Route path="/images-vite/photos/:id" element={<ImageDetails />} />
 
         </Routes>
     )
