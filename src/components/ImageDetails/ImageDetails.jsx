@@ -23,8 +23,9 @@ function ImageDetails(){
     },[])
 
     return(
-        <div className="text-center bg-green-400 h-screen">
-            
+        <div className="text-center flex items-center justify-center h-screen">
+            <div className="bg-gray-100 w-auto border-y-zinc-600 rounded-2xl p-6">
+
             <img src={imageDetails.url} alt="photoPreview" 
                     className=" ml-auto mr-auto rounded-2xl shadow-md"/>
 
@@ -38,6 +39,8 @@ function ImageDetails(){
                     <span className="font-serif"> {imageDetails.description}</span> 
                     
                 </p>
+            </div>
+            
         </div>
     )
 }
