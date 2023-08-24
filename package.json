@@ -1,12 +1,10 @@
 {
-  "homepage": "https://Raviraj-Singh3.github.io/Image-gallery-react-vite",
-
   "name": "image-gallery",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "predeploy":"npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
