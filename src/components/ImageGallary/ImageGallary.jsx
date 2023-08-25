@@ -37,12 +37,9 @@ function ImageGallary(){
                 </div>
                 
             </div>
-            <div className=' flex  '>
+            <div className='  '>
                 
-                <div
-                    className=' m-2 flex flex-wrap justify-center 
-         mt-6   '
-                >
+                <div className='grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 desktop:grid-cols-4 mt-6'>
                     {imageList.map((i) => <ImageView url={i.url} key={i.id} title={i.title} id={i.id} />
                     )}
                 </div>
