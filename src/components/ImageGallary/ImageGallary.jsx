@@ -11,10 +11,10 @@ function ImageGallary(){
     const [photosLink, setPhotosLink] = useState(`https://api.slingacademy.com/v1/sample-data/photos?offset=${offset}&limit=12`)
     
     async function fetchdata(){
+        setIsLoading(false);
         const response = await axios.get(photosLink);
         const results = response.data.photos;
         console.log(results);
-        // setOffset( offset + 10);
         const res = results.map((result) => {
             return {
                 id: result.id,
@@ -22,18 +22,21 @@ function ImageGallary(){
                 url: result.url
             }
         });
+        console.log(res);
         setImageList(res);
-        setIsLoading(false);
-        setOffset(offset+12)
+        setOffset(offset+12);
+        // setIsLoading(false);
+        
     }
-    
-
     useEffect(() => {
         fetchdata();
     },[photosLink])
     
     return( 
         <div className='  p-5 bg-green-400'>
+            <div>
+                    {(isLoading) && 'Loading' }
+                </div>
             <div className=' w-auto flex justify-center'>
                 <div className='rounded-md w-1/2 text-center p-4 bg-gray-100'>
                     <h1 className='text-2xl font-bold text-orange-300'>Images</h1>
@@ -57,15 +60,13 @@ function ImageGallary(){
                         // disabled={offset > 24}
                         onClick={()=> { 
                         setPhotosLink(`https://api.slingacademy.com/v1/sample-data/photos?offset=${offset}&limit=12`);
-                        console.log("inside click", offset)
+                        console.log("inside click",offset)
                         }}> 
                         Next
                     </button>
                 }
                 </div>
-                <div>
-                    {(isLoading) && 'Loading' }
-                </div>
+                
         </div>
     )
 }
