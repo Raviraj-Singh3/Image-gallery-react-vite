@@ -1,7 +1,6 @@
-// import useImageHook from '../../hooks/useImageHook';
+import useImageHook from '../../hooks/useImageHook';
 import ImageView from '../ImageView/ImageView';
 // https://api.slingacademy.com/v1/sample-data/photos?offset=5&limit=20
-// import useImageHook from '../../hooks/useImagehook';
 
 
 function ImageGallary(){
